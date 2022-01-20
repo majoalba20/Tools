@@ -1,0 +1,88 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.button-info, .button-menu{
+    display: inline-block;
+    cursor: pointer;
+}
+
+p , .button-menu h1{
+    display: none;
+    font-size: 1rem;
+}
+
+h1:hover{
+    color: blueviolet;
+}
+
+.line1, .line2, .line3{
+    height: 5px;
+    width: 35px;
+    background-color: #4c3;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.active .line2{
+    opacity: 0;
+}
+
+.active .line1{
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.active .line3{
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.active p, .active h1{
+    display: block;
+}
+
+.info{
+    cursor: pointer;
+    height: 39px;
+    border: 0;
+    width: fit-content;
+    color: seashell;
+    background-color: seagreen;
+}
+
+.bg-modal{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+}
+
+.modal{
+    background: #fff;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.close{
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-color: crimson;
+}
+
+.showModal{
+    display: flex;
+    opacity: 1;
+}
+
+@media screen and (max-width: 375px) {
+    main{
+        grid-template-columns: 1fr;
+    }
+}
